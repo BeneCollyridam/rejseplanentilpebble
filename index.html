@@ -78,18 +78,16 @@ var data;
 	}
 	
 	function submit(){
-		var settings = {origin: document.getElementById("hjem").value,
-						dest: document.getElementById("arbejde").value
+		var hjem = document.getElementById("hjem").value;
+		var arbejde = document.getElementById("arbejde").value;
+		var settings = {origin: hjem,
+						dest: arbejde
 						}
 		if(parseInt(hjem) != NaN && parseInt(arbejde) != NaN){
+			console.log("Done");
 			var return_to = getQueryParam('return_to', 'pebblejs://close#');
 			document.location = return_to + encodeURIComponent(JSON.stringify(some_settings));
 		}
-		
-		
-		
-		
-		
 	}
 
 </script>
