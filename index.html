@@ -80,9 +80,10 @@ var data;
 	function submit(){
 		var hjem = document.getElementById("hjem").value;
 		var arbejde = document.getElementById("arbejde").value;
-		var settings = {origin: hjem,
+		var some_settings = {
+						origin: hjem,
 						dest: arbejde
-						}
+		}
 		if(parseInt(hjem) != NaN && parseInt(arbejde) != NaN){
 			console.log("Done");
 			var return_to = getQueryParam('return_to', 'pebblejs://close#');
